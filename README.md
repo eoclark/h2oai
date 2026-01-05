@@ -32,6 +32,7 @@ H2OGPTE_BASE_URL=https://h2ogpte.genai.h2o.ai
 H2OGPTE_SESSION=your-session-id-here
 H2OGPTE_CSRF_TOKEN=your-csrf-token-here
 H2OGPTE_WORKSPACE_ID=workspaces/your-uuid-here
+H2OGPTE_PROMPT_TEMPLATE_ID=your-prompt-template-uuid (可选)
 API_KEY=your-secret-key (可选)
 ```
 
@@ -40,6 +41,7 @@ API_KEY=your-secret-key (可选)
 > 2. 打开浏览器开发者工具 (F12)
 > 3. **Session ID & Token**: 在网络请求中找到 Cookie (`h2ogpte.session`) 和 Header (`x-csrf-token`)
 > 4. **Workspace ID**: 查看浏览器地址栏或网络请求，格式通常为 `workspaces/uuid`。如果是 guest 用户，默认为 `workspaces/h2ogpte-guest`。
+> 5. **Prompt Template ID**: 在 "Customize chat" > "Prompts" 中选择模板后，从网络请求 `set_chat_session_prompt_template` 的参数中获取 UUID。
 
 ### 3. 启动服务
 

@@ -62,6 +62,7 @@ class H2OGPTEClient:
             {"id": "claude-3-7-sonnet", "name": "Claude 3.7 Sonnet"},
             {"id": "claude-3-5-sonnet", "name": "Claude 3.5 Sonnet"},
             {"id": "deepseek-ai/DeepSeek-R1", "name": "DeepSeek R1"},
+            {"id": "deepseek-ai/DeepSeek-V3", "name": "DeepSeek V3"},
             {"id": "gpt-4.1", "name": "GPT-4.1"},
             {"id": "gpt-4o", "name": "GPT-4o"},
             {"id": "gpt-5", "name": "GPT-5"},
@@ -253,7 +254,7 @@ class H2OGPTEClient:
             "rag_config": json.dumps(rag_config),
             "include_chat_history": "auto",
             "tags": [],
-            "prompt_template_id": None
+            "prompt_template_id": config.H2OGPTE_PROMPT_TEMPLATE_ID if config.H2OGPTE_PROMPT_TEMPLATE_ID else None
         }
         
         if system_prompt:

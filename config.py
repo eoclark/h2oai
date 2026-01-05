@@ -14,6 +14,8 @@ class Config:
     H2OGPTE_CSRF_TOKEN: str = os.getenv("H2OGPTE_CSRF_TOKEN", "")
     # 默认为 h2ogpte-guest，登录用户需要设置为 workspaces/<uuid>
     H2OGPTE_WORKSPACE_ID: str = os.getenv("H2OGPTE_WORKSPACE_ID", "workspaces/h2ogpte-guest")
+    # 自定义 Prompt Template ID（留空则不使用，填写 UUID 如：37b22dcd-a3c7-406c-8890-387ea6668513）
+    H2OGPTE_PROMPT_TEMPLATE_ID: str = os.getenv("H2OGPTE_PROMPT_TEMPLATE_ID", "")
     
     # 服务器配置
     HOST: str = os.getenv("HOST", "0.0.0.0")
